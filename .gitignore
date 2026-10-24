@@ -1,0 +1,24 @@
+# Data (kept local; documented in README instead)
+data/raw/*/*
+data/processed/*/*
+!data/raw/*/.gitkeep
+!data/processed/*/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Environments and secrets
+.env
+.venv/
+*.pem
+
+# Model artifacts (large, regenerable)
+models/**/*.joblib
+models/**/*.pkl
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
