@@ -11,15 +11,13 @@ Use one shared conda environment for the whole programme.
 Run the following commands in order:
 
 ```bash
-git clone <repository-url>
-cd <repository-folder>
+git clone https://github.com/JangDeals/Machine_Learning.git
+cd Machine_Learning
 conda create -n mlpath python=3.11
 conda activate mlpath
 pip install -r requirements.txt
 pip install -e .
 ```
-
-Replace `<repository-url>` with the repository's Git URL and `<repository-folder>` with the name of the cloned directory.
 
 - `conda create -n mlpath python=3.11` creates the environment using Python 3.11.
 - `conda activate mlpath` activates the environment.
@@ -50,8 +48,24 @@ Datasets are not stored in Git. Each dataset is downloaded from Kaggle and place
 
 Raw datasets remain unchanged. Any cleaning, transformation, or feature engineering that produces a new dataset should write the derived data to `data/processed/`.
 
+### Datasets used so far
+
+| Dataset | Source | Place the file in |
+|---|---|---|
+| Telco Customer Churn | [Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) | `data/raw/classification/WA_Fn-UseC_-Telco-Customer-Churn.csv` |
+
+Each dataset remains subject to its own licence and terms on its Kaggle page. They are not redistributed in this repository.
+
+## Notebooks
+
+- `notebooks/classification/00_setup_check.ipynb`: verifies the environment and kernel.
+- `notebooks/classification/01_telco_data_audit.ipynb`: Telco data audit, leakage log, and modeling plan.
+
+Notebooks are committed with their outputs cleared.
+
 ## Status
 
-**Module 1 — Setup: Complete.**
-
-Remaining: Kaggle API download helper, planned for Module 2.
+- Module 1 (setup): complete.
+- Module 2 (data understanding): Telco audit complete.
+- Next: preprocessing pipeline and baseline for Telco churn.
+- Planned: Kaggle API download helper.
