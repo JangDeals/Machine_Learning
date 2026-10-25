@@ -8,6 +8,10 @@ data/processed/*/*
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.egg-info/
 
 # Environments and secrets
 .env
